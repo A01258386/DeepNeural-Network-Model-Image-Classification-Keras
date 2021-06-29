@@ -26,3 +26,7 @@ print('X_test.shape:', X_test.shape)
 X_train = X_train.astype('float32')
 X_test = X_test.astype('float32')
 
+# normalize the pixel values from the range of 0-255 to 0-1
+X_train /= 255
+X_test /= 255
+
