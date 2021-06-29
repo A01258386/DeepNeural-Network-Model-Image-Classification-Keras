@@ -17,3 +17,12 @@ print('X_test.shape:', X_test.shape)
 # flatten the images in X_train and X_test such that each sample becomes a row vector
 X_train = X_train.reshape(60000, 784)
 X_test = X_test.reshape(10000, 784)
+
+
+print('X_train.shape:', X_train.shape)
+print('X_test.shape:', X_test.shape)
+
+# convert the pixel values from integer to float32 and 
+X_train = X_train.astype('float32')
+X_test = X_test.astype('float32')
+
