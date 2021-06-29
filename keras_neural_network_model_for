@@ -41,3 +41,14 @@ num_pixels = X_train.shape[1]
 # determine number of classes
 num_classes = 10
 
+# define a deep neural network model using the sequential model API
+# Layer 0: input layer specifying the dimension of each sample
+# Layer 1: n^[1] = 800 nodes, g^[1] = ReLU
+# Layer 2: n^[2] = 100 nodes, g^[2] = ReLU
+# Layer 3: n^[3] = num_classes nodes, g^[3] = softmax
+
+model = Sequential()
+model.add(Input( shape=(784,))) #model.add(keras.Input(shape=(784,)))
+model.add(Dense( 800,activation='relu'))
+model.add(Dense( 100 ,activation='relu'))
+model.add(Dense( num_classes,activation='softmax' ))
