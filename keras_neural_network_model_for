@@ -52,3 +52,6 @@ model.add(Input( shape=(784,))) #model.add(keras.Input(shape=(784,)))
 model.add(Dense( 800,activation='relu'))
 model.add(Dense( 100 ,activation='relu'))
 model.add(Dense( num_classes,activation='softmax' ))
+
+# print a summary of the model
+model.summary()
