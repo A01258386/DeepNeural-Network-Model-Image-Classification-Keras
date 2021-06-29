@@ -1,0 +1,10 @@
+import numpy as np
+import tensorflow as tf
+from tensorflow.keras import Input
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.optimizers import SGD
+from tensorflow.keras.datasets import mnist
+
+# load MNIST dataset
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
