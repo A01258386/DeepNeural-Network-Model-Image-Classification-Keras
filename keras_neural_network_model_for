@@ -55,3 +55,11 @@ model.add(Dense( num_classes,activation='softmax' ))
 
 # print a summary of the model
 model.summary()
+
+# compile the model using
+# a. Optimizer: gradient descent SGD with a learning rate of 0.1
+# b. Loss function: sparse_categorical_crossentropy 
+# c. Metrics: accuracy
+
+opt= SGD(learning_rate=0.1)
+model.compile(loss='sparse_categorical_crossentropy',metrics=['accuracy'],optimizer=opt)
