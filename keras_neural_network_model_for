@@ -63,3 +63,11 @@ model.summary()
 
 opt= SGD(learning_rate=0.1)
 model.compile(loss='sparse_categorical_crossentropy',metrics=['accuracy'],optimizer=opt)
+
+
+# fit the model to training data
+model.fit(X_train, y_train, epochs = 10, verbose = 1)
+
+# evaluate the model on the test data
+loss, acc = model.evaluate(X_test, y_test, verbose = 1)
+print('Test accuracy = %.3f' % acc)
